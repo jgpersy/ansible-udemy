@@ -2,7 +2,7 @@
 - hosts: webserver
   become: true
   tasks:
-    - name: install apache2
+    - name: install components
       apt: 
         state: present
         update_cache: yes
@@ -10,5 +10,4 @@
           - apache2
           - libapache2-mod-wsgi
           - python3
-          - python_pip
           - python_virtualenv
