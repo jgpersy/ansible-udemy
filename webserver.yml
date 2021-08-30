@@ -10,3 +10,6 @@
           - apache2
           - libapache2-mod-wsgi
           - python3
+          
+    - name: ensure apache is started
+      service: name=apache state=started enabled=yes
