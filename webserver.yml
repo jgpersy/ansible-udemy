@@ -3,7 +3,4 @@
   become: true
   tasks:
     - name: install apache2
-      apt: 
-        - name: ['apache2','libapache2-mod-wsgi','python_pip','python_virtualenv']
-          state: present 
-          update_cache: yes
+      apt: name=['apache2','libapache2-mod-wsgi','python_pip','python_virtualenv'] state=present update_cache=yes
