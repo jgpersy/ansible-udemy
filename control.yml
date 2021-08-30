@@ -1,0 +1,10 @@
+---
+- hosts: control
+  become: true
+  tasks:
+    - name: Install control tools
+      apt: 
+        state: present
+        update_cache: yes
+        pkg:
+          - curl
