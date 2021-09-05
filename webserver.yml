@@ -1,7 +1,16 @@
 ---
+
 - hosts: webserver
   become: true
   tasks:
+
+    - name: uninstall python 2.7
+      apt:
+        state: absent
+        purge: yes
+        pkg:
+          - python2.7-minimal
+
     - name: install components
       apt: 
         state: present
