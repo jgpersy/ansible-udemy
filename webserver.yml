@@ -3,16 +3,6 @@
 - hosts: webserver
   become: true
   tasks:
-
-    - name: uninstall python 2.7
-      apt:
-        state: absent
-        update_cache: yes
-        purge: yes
-        pkg:
-          - python2.7-minimal
-          - libapache2-mod-wsgi
-
     - name: install components
       apt: 
         state: present

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 activate_this = '/var/www/demo/.venv/bin/activate_this.py'
 exec(open(activate_this, dict(__file__=activate_this).read()) 
 
